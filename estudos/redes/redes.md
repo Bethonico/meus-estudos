@@ -3,7 +3,7 @@ titulo: "Redes"
 categoria: "Redes"
 nivel: "Intermediário"
 status: "Estudando"
-atualizado_em: "2026-09-17T23:20:00.000Z"
+atualizado_em: "2026-09-19T20:14:00.000Z"
 ---
 
 # Redes
@@ -262,3 +262,119 @@ Dispositivos finais são os equipamentos de rede com que as pessoas mais têm co
 - Que tipo de dispositivo final e de mídia tende a ser usado por alguém que trabalha em campo mas precisa de acesso à internet e videoconferência?
 
 - Como uma mensagem consegue ir de um dispositivo final numa LAN até um dispositivo final em outra LAN?
+
+# Conectividade com a Internet
+
+## Provedor de Serviços de Internet (ISP)
+
+### Resumo simples
+
+O ISP (Internet Service Provider, ou provedor de serviços de Internet) é a empresa que faz a "ponte" entre a rede da sua casa e a internet. Imagine que a internet é uma grande rodovia: o ISP é a estradinha que liga a sua rua a essa rodovia. Um ISP pode ser a empresa de TV a cabo da sua região, a empresa de telefonia fixa, a operadora de celular que dá sinal ao seu smartphone, ou um provedor independente que aluga espaço (largura de banda) na infraestrutura física de outra empresa. Muitos ISPs também vendem serviços extras, como contas de e-mail, armazenamento na rede, hospedagem de sites, segurança e backup automático. Os ISPs são essenciais para a internet global: cada um se conecta a outros ISPs, formando uma teia de ligações que interliga pessoas do mundo inteiro. Eles se organizam de forma hierárquica (em níveis, como uma árvore), o que garante que o tráfego da internet geralmente siga o caminho mais curto da origem até o destino.
+
+### Conceitos principais
+
+- ISP: empresa que fornece o link (a ligação) entre a rede doméstica e a Internet
+
+- Tipos de ISP: provedor de TV a cabo, provedor de telefonia fixa, rede celular, provedor independente (que aluga largura de banda da infraestrutura de outra empresa)
+
+- Serviços adicionais: e-mail, armazenamento de rede, hospedagem de sites, segurança e backup automático
+
+- Cada ISP se conecta a outros ISPs, formando uma rede de links que liga usuários no mundo todo
+
+- Organização hierárquica: garante que o tráfego siga, em geral, o caminho mais curto entre origem e destino
+
+### Perguntas-guia
+
+- O que é um ISP e qual o papel dele entre a rede doméstica e a Internet?
+
+- Quais tipos de empresa podem atuar como ISP?
+
+- Que serviços adicionais um ISP costuma oferecer além do acesso à internet?
+
+- Por que os ISPs precisam se conectar uns aos outros?
+
+- Qual a vantagem de os ISPs serem organizados de forma hierárquica?
+
+## Backbone da Internet
+
+### Resumo simples
+
+O backbone (que significa "espinha dorsal") da Internet é como uma superautoestrada de informações: um conjunto de ligações de dados de altíssima velocidade que conecta as redes dos vários provedores nas grandes áreas metropolitanas do mundo todo. O principal meio físico que sustenta esse backbone é o cabo de fibra óptica (aquele que transporta a informação como pulsos de luz). Esse cabo normalmente é enterrado no subterrâneo para ligar cidades dentro de um mesmo continente, e também passa por baixo do mar para conectar continentes, países e cidades.
+
+### Conceitos principais
+
+- Backbone da Internet: "autoestrada" de dados de alta velocidade que conecta as redes dos provedores em grandes áreas metropolitanas do mundo
+
+- Principal meio físico do backbone: cabo de fibra óptica
+
+- Em terra: cabo instalado no subterrâneo, conectando cidades dentro dos continentes
+
+- No mar: cabo submarino, conectando continentes, países e cidades
+
+### Perguntas-guia
+
+- Por que o backbone é comparado a uma autoestrada de informações?
+
+- Qual é o principal meio físico usado no backbone da Internet?
+
+- Como os cabos de fibra óptica conectam cidades dentro de um continente? E entre continentes?
+
+## Conexões de Cabo e DSL
+
+### Resumo simples
+
+A maioria das pessoas que têm rede em casa não se liga ao provedor por fibra óptica. Para casas e pequenos escritórios, os dois método
+
+> 📝 **Observação — Quem usa essas conexões:** os usuários típicos são o usuário doméstico, o funcionário remoto (teletrabalhador) e os pequenos escritórios. Todos se ligam ao ISP por uma das opções (DSL, cabo, celular, satélite ou discada), e o ISP faz a ligação com a Internet.
+
+### Conceitos principais
+
+- Cabo: sinal de internet no mesmo cabo coaxial da TV a cabo; conexão sempre ativa e com alta largura de banda
+
+- Cable modem: separa o sinal de internet dos outros sinais do cabo e fornece uma conexão Ethernet para um computador ou LAN
+
+- DSL (Linha Digital do Assinante): internet pela linha telefônica; sempre ativa e com alta largura de banda
+
+- Modem DSL de alta velocidade: separa o sinal DSL do sinal de telefone e fornece uma conexão Ethernet
+
+- Os três canais da DSL: voz (chamadas), download (mais rápido) e upload (um pouco mais lento)
+
+- Fatores que afetam a DSL: qualidade da linha telefônica e distância até a central da operadora (quanto mais longe, mais lenta)
+
+### Perguntas-guia
+
+- Quais são os dois métodos de conexão mais comuns para casas e pequenos escritórios?
+
+- Por que um cable modem é necessário? O que ele separa?
+
+- Em quais três canais a linha DSL é dividida e para que serve cada um?
+
+- Por que dá para receber uma ligação telefônica sem se desconectar da internet na DSL?
+
+- Como a distância até a central telefônica afeta a velocidade da DSL?
+
+## Outras Opções de Conectividade
+
+### Resumo simples
+
+Além do cabo e da DSL, existem outras formas de um usuário doméstico se conectar a um ISP: a rede celular, o satélite, a conexão discada (dial-up) e, em áreas metropolitanas, a fibra óptica ligada diretamente ao apartamento ou pequeno escritório. Com a fibra até o local, o provedor consegue oferecer velocidades de largura de banda mais altas e mais serviços ao mesmo tempo, como internet, telefone e TV. No caso do satélite, o computador se liga a um modem de satélite, que se comunica com o satélite usando uma antena parabólica (aquela "antena de prato"); o satélite, por sua vez, conversa com um roteador do provedor de satélite, também por meio de uma antena no local dele. Qual conexão escolher varia de acordo com a localização geográfica e com a disponibilidade de cada provedor na sua região.
+
+### Conceitos principais
+
+- Opções adicionais de conexão: celular, satélite, conexão discada (dial-up) e fibra óptica direta
+
+- Fibra direta (áreas metropolitanas): maior largura de banda e suporte a mais serviços (internet, telefone e TV)
+
+- Satélite: computador → modem satélite → antena parabólica → satélite → antena do ISP → roteador do ISP (provedor de serviço de satélite)
+
+- A escolha da conexão depende da localização geográfica e da disponibilidade do provedor
+
+### Perguntas-guia
+
+- Quais são as opções de conexão com um ISP além de cabo e DSL?
+
+- O que a fibra óptica direta permite que um provedor ofereça em áreas metropolitanas?
+
+- Qual é o caminho que os dados percorrem numa conexão via satélite, do computador até o ISP?
+
+- De que depende a escolha do tipo de conexão?
