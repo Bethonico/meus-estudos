@@ -3,7 +3,7 @@ titulo: "Redes"
 categoria: "Redes"
 nivel: "Intermediário"
 status: "Estudando"
-atualizado_em: "2026-09-20T21:59:00.000Z"
+atualizado_em: "2026-09-22T00:45:00.000Z"
 ---
 
 # Redes
@@ -702,3 +702,39 @@ O broadcast de SSID é o roteador anunciando o nome da rede para todos os dispos
 - O que deve ser usado para restringir o acesso não autorizado a uma rede sem fio?
 
 - Qual a diferença entre o SSID nos quadros da rede e o broadcast de SSID?
+
+# Protocolos de Comunicação
+
+## Elementos das Regras de um Protocolo
+
+### Resumo simples
+
+Para dois dispositivos conseguirem trocar mensagens numa rede, existe um conjunto de regras que precisa ser definido antes — isso é um protocolo. Essas regras cobrem seis aspectos: como a mensagem deve ser estruturada, quanto ela pode "pesar", em que ritmo ela é enviada, como vira sinal físico, como recebe um "envelope" com o endereço de destino, e se é preciso confirmação de recebimento antes de continuar a conversa. Sem essas regras combinadas dos dois lados, os dispositivos não conseguem se entender, mesmo que estejam fisicamente conectados.
+
+### Conceitos principais
+
+- Formato da mensagem: estrutura específica que a mensagem precisa seguir, de acordo com o tipo de mensagem e o canal usado para entregá-la
+
+- Tamanho da mensagem: regras rígidas sobre o tamanho das partes transmitidas; mensagens longas costumam ser divididas em partes menores para garantir entrega confiável
+
+- Temporização: define a velocidade de transmissão dos bits, quando cada host pode enviar dados e a quantidade total que pode ser enviada numa transmissão
+
+- Codificação: processo de converter a mensagem em um padrão de sinais (sons, luz ou pulsos elétricos) de acordo com a mídia usada; o host de destino decodifica o sinal de volta para interpretar a mensagem
+
+- Encapsulamento: adicionar ao dado um cabeçalho com informações de endereçamento (origem e destino), além de outras informações que garantem que a mensagem chegue ao aplicativo correto no host de destino
+
+- Padrão da mensagem: define se é necessária confirmação antes do envio da próxima mensagem (solicitação/resposta) ou se as mensagens podem ser simplesmente transmitidas sem essa preocupação
+
+### Perguntas-guia
+
+- Quais são os seis elementos que um protocolo de rede precisa definir?
+
+- Por que uma mensagem longa às vezes precisa ser dividida em partes menores?
+
+- O que a temporização controla numa comunicação de rede?
+
+- O que acontece com uma mensagem, em termos de codificação, entre ser criada no host de origem e ser interpretada no host de destino?
+
+- Para que serve o encapsulamento e o que ele adiciona à mensagem?
+
+- Qual a diferença entre um padrão de mensagem com confirmação (solicitação/resposta) e um sem confirmação?
