@@ -3,7 +3,7 @@ titulo: "Redes"
 categoria: "Redes"
 nivel: "Intermediário"
 status: "Estudando"
-atualizado_em: "2026-09-22T00:45:00.000Z"
+atualizado_em: "2026-09-22T14:52:00.000Z"
 ---
 
 # Redes
@@ -738,3 +738,152 @@ Para dois dispositivos conseguirem trocar mensagens numa rede, existe um conjunt
 - Para que serve o encapsulamento e o que ele adiciona à mensagem?
 
 - Qual a diferença entre um padrão de mensagem com confirmação (solicitação/resposta) e um sem confirmação?
+
+## Mapa Mental: Modelo TCP/IP e HTTP
+
+### Resumo simples
+
+O modelo TCP/IP organiza a comunicação em 4 camadas empilhadas, cada uma com um protocolo principal associado. Os dados saem da camada de Application (onde o HTTP monta o pedido), passam pelo Transport (onde o TCP organiza e confere), pela Internet (onde o IP decide o endereço/rota) e chegam ao Network Access (onde o Ethernet converte tudo em sinal físico para viajar pelo cabo). No caminho de volta, o processo se desfaz na ordem inversa.
+
+```mermaid
+mindmap
+  root((TCP/IP + HTTP))
+    Application
+      HTTP
+        GET
+        POST
+        PUT
+        DELETE
+    Transport
+      TCP
+        Organiza e numera dados
+        Confirma recebimento
+    Internet
+      IP
+        Endereco de origem e destino
+        Define a rota
+    Network Access
+      Ethernet
+        Converte dados em sinal fisico
+        Entrega dentro da rede local
+```
+
+### Conceitos principais
+
+- Application (HTTP): monta o pedido/resposta entre navegador e servidor, usando métodos como GET, POST, PUT e DELETE
+
+- Transport (TCP): organiza os dados em ordem, numera as partes e confirma que tudo chegou completo
+
+- Internet (IP): define o endereço de origem e destino e decide a rota até o host de destino
+
+- Network Access (Ethernet): converte os dados em sinal elétrico/óptico/sem fio e entrega fisicamente dentro da rede local
+
+- Encapsulamento: cada camada embrulha a de cima com seu próprio cabeçalho, formando o pacote final que viaja pelo cabo
+
+### Perguntas-guia
+
+- Em qual camada do modelo TCP/IP o HTTP atua, e o que ele faz?
+
+- Qual a função do TCP na camada de Transport?
+
+- O que o IP resolve na camada de Internet?
+
+- Como o Network Access converte dados em sinal físico e vice-versa?
+
+- Em que ordem as camadas "embrulham" os dados até chegarem ao cabo, e o que acontece no destino?
+
+## Modelo OSI e Comparação com o TCP/IP
+
+### Resumo simples
+
+O OSI (Open Systems Interconnection) é um modelo teórico de 7 camadas que descreve, em mais detalhes, tudo que acontece numa comunicação de rede. Ele existe antes do TCP/IP e serve principalmente para ensinar e para diagnosticar problemas de rede com precisão. O TCP/IP não é um modelo diferente do OSI — ele apenas agrupa algumas das camadas do OSI em blocos maiores: as camadas de Aplicação, Apresentação e Sessão do OSI viram só "Application" no TCP/IP; e as camadas de Enlace de Dados e Física do OSI viram "Network Access". As camadas de Transporte e Rede do OSI correspondem diretamente a Transport e Internet no TCP/IP. Na prática, quem realmente roda a internet hoje é o TCP/IP; o OSI é usado como referência para localizar problemas ("o erro está na camada 3" significa um problema de roteamento/IP).
+
+### Conceitos principais
+
+- Camada 7 (Aplicação): interface com o usuário e os aplicativos (ex: HTTP, e-mail)
+
+- Camada 6 (Apresentação): formata, criptografa e comprime os dados
+
+- Camada 5 (Sessão): abre, mantém e encerra a "conversa" entre dois pontos
+
+- Camada 4 (Transporte): organiza, numera e confirma a entrega dos dados (TCP/UDP)
+
+- Camada 3 (Rede): endereçamento e definição de rota (IP)
+
+- Camada 2 (Enlace de Dados): entrega dentro da rede local e detecção de erros físicos
+
+- Camada 1 (Física): sinal elétrico, óptico ou de rádio que realmente viaja pelo meio físico
+
+- Correspondência: Aplicação + Apresentação + Sessão (OSI) = Application (TCP/IP); Transporte (OSI) = Transport (TCP/IP); Rede (OSI) = Internet (TCP/IP); Enlace de Dados + Física (OSI) = Network Access (TCP/IP)
+
+- OSI é usado principalmente para ensino e diagnóstico de problemas; TCP/IP é o conjunto de protocolos realmente usado na internet
+
+### Mapa mental — As 7 camadas do OSI
+
+```mermaid
+mindmap
+  root((Modelo OSI))
+    Aplicacao
+      Camada 7
+      Interface com o app
+    Apresentacao
+      Camada 6
+      Formata e criptografa
+    Sessao
+      Camada 5
+      Controla a conversa
+    Transporte
+      Camada 4
+      TCP
+    Rede
+      Camada 3
+      IP
+    Enlace de Dados
+      Camada 2
+      Rede local
+    Fisica
+      Camada 1
+      Sinal eletrico, optico, radio
+```
+
+### Mapa mental — Comparação OSI x TCP/IP
+
+```mermaid
+flowchart LR
+  subgraph OSI["Modelo OSI - 7 camadas"]
+    direction TB
+    L7["7 Aplicacao"]
+    L6["6 Apresentacao"]
+    L5["5 Sessao"]
+    L4["4 Transporte"]
+    L3["3 Rede"]
+    L2["2 Enlace de Dados"]
+    L1["1 Fisica"]
+  end
+  subgraph TCPIP["TCP/IP - 4 camadas"]
+    direction TB
+    A["Application (HTTP)"]
+    T["Transport (TCP)"]
+    I["Internet (IP)"]
+    N["Network Access (Ethernet)"]
+  end
+  L7 --> A
+  L6 --> A
+  L5 --> A
+  L4 --> T
+  L3 --> I
+  L2 --> N
+  L1 --> N
+```
+
+### Perguntas-guia
+
+- Quantas camadas tem o modelo OSI e quantas tem o modelo TCP/IP?
+
+- Quais três camadas do OSI se juntam para formar a camada Application do TCP/IP?
+
+- Quais duas camadas do OSI se juntam para formar a camada Network Access do TCP/IP?
+
+- Por que o modelo OSI ainda é usado, mesmo o TCP/IP sendo o modelo realmente implementado na internet?
+
+- O que significa dizer que "o problema está na camada 3" usando a linguagem do OSI?
